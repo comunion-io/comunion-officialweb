@@ -49,7 +49,7 @@ export default {
 
   mixins: [Commons],
 
-  data() {
+  data () {
     return {
       ready: false,
 
@@ -63,7 +63,7 @@ export default {
     ...mapState({
       loaded: state => state.site.loaded
     }),
-    isTheGate() {
+    isTheGate () {
       return this.$route.fullPath === '/projects/the-gate'
     }
   },
@@ -83,13 +83,13 @@ export default {
   },
 
   watch: {
-    $route(to, from) {
+    $route (to, from) {
       this.update(to, from)
     }
   },
 
   methods: {
-    initialize() {
+    initialize () {
       this.update()
 
       this.addListeners()
@@ -105,7 +105,7 @@ export default {
       })
     },
 
-    update(to, from) {
+    update (to, from) {
       let name = to ? to.name : this.$route.name
 
       let params = to ? to.params : this.$route.params
@@ -114,8 +114,8 @@ export default {
         name == States.LEAF
           ? 'light'
           : name == States.PARTNERS
-          ? 'color'
-          : 'dark'
+            ? 'color'
+            : 'dark'
       this.$route.fullPath === '/projects/the-gate' && (theme = 'light')
       let scroll =
         name != States.PARTNERS &&
@@ -133,22 +133,23 @@ export default {
           TweenMax.delayedCall(delay, () => {
             this.$mixer.play('section')
           })
-        } else
+        } else {
           TweenMax.delayedCall(delay, () => {
             this.$mixer.play('swipe')
           })
+        }
       }
 
       this.$bus.emit(Events.UISTATE, { theme, scroll, visible })
     },
 
-    addListeners() {
+    addListeners () {
       this.$wheel.bus.on(Events.WHEEL, this.wheel)
 
       this.$swiper.bus.on(Events.DROP, this.drop)
     },
 
-    wheel(delta) {
+    wheel (delta) {
       let curr = this.current
 
       let sid = this.sid
@@ -176,7 +177,7 @@ export default {
       this.delta = delta
     },
 
-    drop(event) {
+    drop (event) {
       let dir = event.dir
 
       let leave = event.leave
@@ -200,7 +201,7 @@ export default {
       }
     },
 
-    passThrough(curr, next, sid) {
+    passThrough (curr, next, sid) {
       let model = this.tree[next]
 
       let slide = this.slider[sid] || this.slider[0]
@@ -219,7 +220,7 @@ export default {
     }
   },
 
-  created() {
+  created () {
     this.$bus.on(Actions.APP_READY, this.initialize)
 
     this.$ticker.fps(60)
@@ -243,7 +244,7 @@ main {
   z-index: 1;
   // opacity: 0.38;
   background-blend-mode: hard-light;
-  background-image: linear-gradient(58deg, rgba(103, 163, 239, 0), #7b87f0);
+  background-image: linear-gradient(58deg,rgba(103, 163, 239, 0), #4775af, rgba(103, 163, 239, 0));
 
   // background: {
 

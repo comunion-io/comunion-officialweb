@@ -101,11 +101,12 @@ export default {
 
 			position: absolute;
 
-			width: 61px; height: 68px;
+			width: 48px;
+			height: 48px;
 
 			margin: 0 auto;
 
-			right: 110px;
+			right: 20px;
 
 			@media ( max-width: map-get( $sizes, custom ) - 1 ) {
 
@@ -117,7 +118,8 @@ export default {
 
 			position: relative;
 
-			width: 61px; height: 68px;
+			width: 48px;
+			height: 48px;
 
 			margin: 0 auto;
 

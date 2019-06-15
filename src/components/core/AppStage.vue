@@ -64,7 +64,7 @@ export default {
 
   mixins: [Commons],
 
-  data() {
+  data () {
     return {
       visuals: [],
 
@@ -83,21 +83,21 @@ export default {
   },
 
   watch: {
-    $route(to, from) {
+    $route (to, from) {
       console.log(to, from, 'route...')
       // this.update( to, from )
     }
   },
-  created(){
+  created () {
     console.log(this.$route, '*****')
   },
-  computed:{
-    isTheGate(){
+  computed: {
+    isTheGate () {
       return this.$route.fullPath === '/projects/the-gate'
     }
   },
   methods: {
-    resize() {
+    resize () {
       if (!this.renderer) return
 
       let width = window.innerWidth
@@ -115,7 +115,7 @@ export default {
     }
   },
 
-  mounted() {}
+  mounted () {}
 }
 </script>
 
@@ -152,12 +152,12 @@ export default {
 }
 $planet-names: mercury, venus, earth, mars, jupiter, saturn, uranus, neptune;
 
-$planet-diameter: 0.4878, 1.2104, 1.276, 0.6787, 2.84, 1.95, 1.812, 1.753;
+$planet-diameter: 0.4878, 1.2104, 1.276, 0.97, 2.84, 1.95, 1.812, 1.753;
 
 $orbit-time: 10.88, 20.25, 30.6525, 60.87, 130.46475, 70.74875, 60.81, 20.6625;
 //days devided by 100
 
-$planet-colors: #a1a1a1, #f5cc96, #495391, #b95730, #d5ba8e, #dab37a, #c4eaed,
+$planet-colors: #a1a1a1, #f5cc96, #495391, #fff5ba, #4775af, #dab37a, #c4eaed,
   #6393e5;
 
 html {
@@ -311,6 +311,7 @@ input[type='range']::-webkit-slider-thumb {
     transform: rotate(360deg);
   }
 }
+
 .mercury {
   border: 1px solid rgba(white, 0.9);
 }
@@ -368,6 +369,9 @@ input[type='range']::-webkit-slider-thumb {
     #003079 100%
   );
 }
+.is-the-gate .orbit-plough {
+  visibility: hidden;
+}
 .orbit-sp-star {
   position: absolute;
   left: 288px;
@@ -378,5 +382,8 @@ input[type='range']::-webkit-slider-thumb {
   opacity: 0.67;
   background: #7b88ff;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #001f4f 100%);
+}
+.is-the-gate .orbit-sp-star {
+  visibility: hidden;
 }
 </style>

@@ -65,11 +65,10 @@
 
 					</span>
 				</p>
-
 				<ul class="social">
-					<li id="fb"><a :href="social.fb" target="_blank"><img :src="assets['fb_icon'].src" alt=""></a></li>
-					<li id="in"><a :href="social.in" target="_blank"><img :src="assets['in_icon'].src" alt=""></a></li>
-					<li id="yt"><a :href="social.yt" target="_blank"><img :src="assets['yt_icon'].src" alt=""></a></li>
+					<li id="medium"><a :href="social.medium" target="_blank"><img :src="assets['medium'].src" alt=""></a></li>
+					<li id="twitter"><a :href="social.twitter" target="_blank"><img :src="assets['twitter'].src" alt=""></a></li>
+					<li id="github"><a :href="social.github" target="_blank"><img :src="assets['github'].src" alt=""></a></li>
 				</ul>
 
 				<p class="footer">
@@ -124,7 +123,7 @@ export default {
 
     social () { return window.appconf.social },
 
-    lang () { return window.appconf.lang == 'en' || window.appconf.lang == '' ? 'it' : 'en' }
+    lang () { return window.appconf.lang === 'en' || window.appconf.lang === '' ? 'it' : 'en' }
   },
 
   watch: {
@@ -575,7 +574,9 @@ export default {
 					display: inline-block;
 				}
 			}
-
+			.social{
+				margin-left: -60px;
+			}
 			ul.social {
 
 				position: absolute;
@@ -592,12 +593,7 @@ export default {
 
 				    padding: .25em .35em;
 
-				    margin: 0;
-
-				    &#fb {
-
-				   		padding: .25em;
-				    }
+				    margin: 0 7px;
 
 					a {
 
@@ -605,9 +601,9 @@ export default {
 
 						img {
 
-							width: 22px; height: auto;
-
-						    display: block;
+							width: 22px;
+							height: 22px;
+							display: block;
 						}
 					}
 				}
