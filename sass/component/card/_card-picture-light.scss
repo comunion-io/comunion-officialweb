@@ -1,0 +1,86 @@
+
+// default layout
+.card-picture-light{
+    border: none;
+    background: $black;
+    overflow: hidden;
+    position: relative;
+    
+    .card-img-top {
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    .card-block {
+        position: absolute;
+        $margin: 16px;
+        top: auto;
+        left: $margin;
+        right: $margin;
+        padding-bottom: $margin;
+        bottom: 72px;
+        background: none;
+        color: $white;
+        border-bottom: 2px solid currentColor;
+        p,
+        ul {
+            // color: $blockTextColor;
+            margin: 0;
+            .text-muted {
+                color: inherit !important;
+                opacity: 0.75;
+            }
+        }
+        h4,
+        .card-title {
+            font-family: $sans;
+            font-size: $text-large;
+            margin-bottom: 0.25em;
+        }
+    }
+    .price {
+        color: $white;
+        font-size: $text-xlarge;
+        line-height: 1;
+    }
+    .card-footer {
+        color: $white;
+        background-image: linear-gradient(top, transparent, transparentize(#000, 0.25));
+        padding-top: 2rem;
+        border: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    &.shadow {
+        border: none;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.2);
+        .card-footer {
+            border: none;
+        }
+    }
+}
+
+// mixin
+@mixin card-picture-light($color: $white) {
+    .card-block {
+        color: $color;
+    }
+    .price {
+        color: $color;
+    }
+    .card-footer {
+        color: $color;
+    }
+}
+
+// alternative colors
+@each $color,
+$value in $theme-colors {
+    .card-picture-light.card-#{""+$color} {
+        @include card-picture-light($value)
+    }
+}

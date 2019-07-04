@@ -1,0 +1,118 @@
+// picture oriented card
+// default layout
+.card-picture{
+    border: none;
+    background: $black;
+    overflow: hidden;
+    position: relative;
+    &.card-colored {
+        .card-block {
+            color: $white;
+            background: $primary;
+            p,
+            ul,
+            h4 {
+                color: $white;
+            }
+        }
+    }
+    .card-img-top {
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    .card-block {
+        position: absolute;
+        $margin: 0.25rem;
+        top: $margin;
+        left: $margin;
+        right: $margin;
+        border-radius: 2px;
+        padding: 0.75rem;
+        background: $white;
+        color: $black;
+        p,
+        ul {
+            // color: $blockTextColor;
+            margin: 0;
+            .text-muted {
+                color: inherit !important;
+                opacity: 0.75;
+            }
+        }
+        h4,
+        .card-title {
+            font-family: $sans;
+            color: $primary;
+            font-size: $text-medium;
+            margin-bottom: 0.25em;
+        }
+    }
+    .price {
+        color: $white;
+        font-size: $text-xlarge;
+        line-height: 1;
+    }
+    .card-footer {
+        color: $white;
+        background-image: linear-gradient(top, transparent, transparentize(#000, 0.25));
+        padding-top: 2rem;
+        border: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    &.shadow {
+        border: none;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.2);
+        .card-footer {
+            border: none;
+        }
+    }
+}
+
+// mixin
+@mixin card-picture($blockBg: $white, $blockTextColor: $black, $blockTitleColor: $black, $footerTextColor: $white) {
+    &.card-colored {
+        .card-block {
+            color: $white;
+            background: $blockBg;
+            h4,
+            .card-title {
+                color: inherit;
+            }
+        }
+    }
+    .card-block {
+        color: $blockTextColor;
+        h4,
+        .card-title {
+            color: $blockTitleColor;
+        }
+    }
+    .price {
+        color: $footerTextColor;
+    }
+    .card-footer {
+        color: $footerTextColor;
+    }
+}
+
+// alternative layout
+@each $color,
+$value in $theme-colors {
+    @if $value==$white {
+        .card-picture.card-white {
+            // here $value = $white 
+            @include card-picture($white, $white, $primary, transparent)
+        }
+    }
+    @else {
+        .card-picture.card-#{""+$color} {
+            @include card-picture($value, $black, $value, $white)
+        }
+    }
+}

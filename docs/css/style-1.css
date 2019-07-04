@@ -1,0 +1,17 @@
+.display-title {
+  font-family: "Bebas Neue", sans-serif; }
+
+.btn {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.2em;
+  line-height: 46px;
+  height: 46px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 2px; }
+
+.btn-outline-white {
+  line-height: 44px; }
+
+.btn-outline-primary {
+  line-height: 44px; }
