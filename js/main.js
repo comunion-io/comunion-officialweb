@@ -450,5 +450,13 @@ $(document).on('ready', function () {
 		// shadowBall.posy.value = e.pageY;
 	});
 
+	//pop ad
+	var mask = $("#mask");
+	mask.on('click', function() {
+		mask.hide();
+	});
+    contextWindow.on('load', function () {
+    	mask.show();
+    });
 });
 
