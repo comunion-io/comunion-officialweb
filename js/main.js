@@ -453,10 +453,10 @@ $(document).on('ready', function () {
 	//pop ad
 	var mask = $("#mask");
 	mask.on('click', function() {
-		mask.hide();
+		mask.removeClass('m-visible');
 	});
     contextWindow.on('load', function () {
-    	mask.show();
+		mask.addClass('m-visible');
     });
 });
 

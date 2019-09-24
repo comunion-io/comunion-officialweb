@@ -5231,18 +5231,13 @@ p {
 }
 
 #mask {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 4%;
+  right: 9%;
   z-index: 999;
-  background: #ffffff;
-  opacity: 0.9;
-  display: none;
-    text-align: center;
 }
 
-#mask img {
-    margin-top: 40%;
+#mask.m-visible {
+  visibility: visible;
 }
