@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+body{
+  /* min-width: 1200px; */
+}
+
+
+a {
+  text-decoration: none;
+  color: rgba(52, 69, 99, 1);
+}
+
+li {
+  list-style: none;
+}
+
