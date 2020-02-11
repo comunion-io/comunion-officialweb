@@ -73,16 +73,16 @@
         <el-col :xs="24" :sm="4" :md="4">
           <div class="list_box">
             <div class="box_img">
-              <img src="@/assets/img/member_list/Song.png" alt="" />
+              <img src="@/assets/img/member_list/QianChen.png" alt="" />
             </div>
-            <div class="list_con" ref="list_box3">
-            <div class="box_title">
-              <p>Song</p>
-            </div>
-            <dl class="box_con">
-              <dt>Product Manager</dt>
-              <dd>Talk to the world using product.</dd>
-            </dl>
+            <div class="list_con" ref="list_box20">
+              <div class="box_title">
+                <p>QianChen</p>
+              </div>
+              <dl class="box_con">
+                <dt>New Media Operators</dt>
+                <dd>A person's dream can only be a dream, a group of people's dream is an era.</dd>
+              </dl>
             </div>
           </div>
         </el-col>
@@ -345,16 +345,16 @@
         <el-col :xs="24" :sm="4" :md="4">
           <div class="list_box">
             <div class="box_img">
-              <img src="@/assets/img/member_list/QianChen.png" alt="" />
+              <img src="@/assets/img/member_list/Song.png" alt="" />
             </div>
-            <div class="list_con" ref="list_box20">
-            <div class="box_title">
-              <p>QianChen</p>
-            </div>
-            <dl class="box_con">
-              <dt>New Media Operators</dt>
-              <dd>A person's dream can only be a dream, a group of people's dream is an era.</dd>
-            </dl>
+            <div class="list_con" ref="list_box3">
+              <div class="box_title">
+                <p>Song</p>
+              </div>
+              <dl class="box_con">
+                <dt>Product Manager</dt>
+                <dd>Talk to the world using product.</dd>
+              </dl>
             </div>
           </div>
         </el-col>
