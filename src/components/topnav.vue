@@ -47,7 +47,7 @@
         </div>
         <div class="last_right_nav">
           <div><img src="@/assets/img/home/hangye-note.png" alt="" /></div>
-          <a href="https://comunion.io/Comunion%20WhitePaper%202.0%20EN.pdf" target="_blank">
+          <a href="https://comunion.io/whitepaper.pdf" target="_blank">
             White paper
           </a>
         </div>

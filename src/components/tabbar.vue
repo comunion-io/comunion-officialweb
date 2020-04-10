@@ -11,7 +11,7 @@
             <dt>About us</dt>
             <dd><router-link to="/members">Team Members</router-link></dd>
             <dd>
-              <a href="https://comunion.io/Comunion%20WhitePaper%202.0%20EN.pdf" target="_blank">
+              <a href="https://comunion.io/whitepaper.pdf" target="_blank">
                 White Paper
               </a>
             </dd>
@@ -49,7 +49,7 @@
           <div class="fr_con">
             <p><router-link to="/members">Team Members</router-link></p>
             <p>
-              <a href="https://comunion.io/Comunion%20WhitePaper%202.0%20EN.pdf" target="_blank">White Paper</a>
+              <a href="https://comunion.io/whitepaper.pdf" target="_blank">White Paper</a>
             </p>
             <p><a href="https://wiki.comunion.io/" target="_blank">Wiki</a></p>
           </div>
